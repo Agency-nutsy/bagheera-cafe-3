@@ -141,7 +141,7 @@ export default function HomePageClient() {
               <Link href="/menu" className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] px-6 py-3 md:px-8 md:py-4 font-bold text-black text-sm md:text-base hover:bg-[#FDF5E6] transition-all shadow-[0_0_20px_rgba(243,208,107,0.3)]">
                 Explore Menu <ArrowRight size={18} />
               </Link>
-              <a href={`tel:+91${PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/30 px-6 py-3 md:px-8 md:py-4 font-bold text-[#FDF5E6] text-sm md:text-base hover:bg-[#FDF5E6]/10 transition-all shadow-xl">
+              <a href={`tel:+91${BUSINESS_CONFIG.contact.phone}`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/30 px-6 py-3 md:px-8 md:py-4 font-bold text-[#FDF5E6] text-sm md:text-base hover:bg-[#FDF5E6]/10 transition-all shadow-xl">
                 <Phone size={18} /> Call Now
               </a>
             </motion.div>

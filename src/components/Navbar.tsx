@@ -92,7 +92,7 @@ const Navbar = () => {
 
         {/* Call to Action Button */}
         <a
-          href={`tel:${PHONE}`}
+          href={`tel:${BUSINESS_CONFIG.contact.phone}`}
           style={{ fontFamily: "'Lato', sans-serif" }}
           className={`hidden md:inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
             showSolid
