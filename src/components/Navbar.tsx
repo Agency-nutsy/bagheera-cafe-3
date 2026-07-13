@@ -116,55 +116,53 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-[#FDF5E6]/10 bg-[#0A0F0D] overflow-hidden shadow-2xl"
-          >
-            <ul className="flex flex-col p-4 gap-2">
-              {navLinks.map((l, i) => (
-                <motion.li
-                  key={l.to}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
-                  <Link
-                    href={l.to}
-                    onClick={() => setOpen(false)}
-                    style={{ fontFamily: "'Lato', sans-serif" }}
-                    className={`block py-3 px-4 rounded-xl text-sm font-bold transition-colors uppercase tracking-widest ${
-                      pathname === l.to
-                        ? "bg-[#F3D06B] text-black shadow-[0_0_15px_rgba(243,208,107,0.3)]"
-                        : "text-[#FDF5E6]/70 hover:bg-[#FDF5E6]/10 hover:text-[#FDF5E6]"
-                    }`}
-                  >
-                    {l.label}
-                  </Link>
-                </motion.li>
-              ))}
+      {open && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          transition={{ duration: 0.2 }}
+          className="md:hidden border-t border-[#FDF5E6]/10 bg-[#0A0F0D] overflow-hidden shadow-2xl"
+        >
+          <ul className="flex flex-col p-4 gap-2">
+            {navLinks.map((l, i) => (
               <motion.li
-                initial={{ opacity: 0, x: -20 }}
+                key={l.to}
+                initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.25 }}
+                transition={{ delay: i * 0.03 }}
               >
-                <a
-                  href={`tel:${PHONE}`}
+                <Link
+                  href={l.to}
+                  onClick={() => setOpen(false)}
                   style={{ fontFamily: "'Lato', sans-serif" }}
-                  className="flex items-center justify-center gap-2 py-4 px-4 rounded-xl bg-[#F3D06B] text-black text-sm font-black text-center mt-4 shadow-[0_0_20px_rgba(243,208,107,0.4)] uppercase tracking-widest"
+                  className={`block py-3 px-4 rounded-xl text-sm font-bold transition-colors uppercase tracking-widest ${
+                    pathname === l.to
+                      ? "bg-[#F3D06B] text-black shadow-[0_0_15px_rgba(243,208,107,0.3)]"
+                      : "text-[#FDF5E6]/70 hover:bg-[#FDF5E6]/10 hover:text-[#FDF5E6]"
+                  }`}
                 >
-                  <Phone size={16} />
-                  Book Your Table
-                </a>
+                  {l.label}
+                </Link>
               </motion.li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <motion.li
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.15 }}
+            >
+              <a
+                href={`tel:${PHONE}`}
+                onClick={() => setOpen(false)}
+                style={{ fontFamily: "'Lato', sans-serif" }}
+                className="flex items-center justify-center gap-2 py-4 px-4 rounded-xl bg-[#F3D06B] text-black text-sm font-black text-center mt-4 shadow-[0_0_20px_rgba(243,208,107,0.4)] uppercase tracking-widest"
+              >
+                <Phone size={16} />
+                Book Your Table
+              </a>
+            </motion.li>
+          </ul>
+        </motion.div>
+      )}
     </motion.nav>
   );
 };
