@@ -106,11 +106,11 @@ export default function HomePageClient() {
 
       {/* ── HERO SECTION ── */}
       <section
-        className="relative z-10 h-[85vh] md:h-screen w-full overflow-hidden bg-black"
+        className="relative z-10 h-[70svh] md:h-screen w-full overflow-hidden bg-black"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="absolute inset-0 z-10 bg-[#0A0F0D]/60" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0A0F0D]/90 via-[#0A0F0D]/40 to-[#0A0F0D]/30 md:bg-[#0A0F0D]/60" />
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -124,30 +124,30 @@ export default function HomePageClient() {
               src={heroSlides[currentSlide]}
               alt="Bagheera Cafe & Lounge"
               fill
-              className="object-cover brightness-[0.7] contrast-[1.2]"
+              className="object-cover object-[75%_center] md:object-center brightness-[0.7] contrast-[1.2]"
               priority={currentSlide === 0}
               sizes="100vw"
             />
           </motion.div>
         </AnimatePresence>
-        <div className="relative z-20 container h-full flex items-center">
-          <div className="max-w-2xl">
+        <div className="relative z-20 container h-full flex items-center pt-[25svh] md:pt-0">
+          <div className="max-w-2xl px-2 sm:px-0">
             <motion.h1
-              className="text-5xl sm:text-6xl md:text-7xl font-display font-bold text-[#FDF5E6] mb-6 uppercase tracking-tighter"
+              className="text-4xl sm:text-6xl md:text-7xl font-display font-bold text-[#FDF5E6] mb-4 md:mb-6 uppercase tracking-tighter"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
             >Bagheera</motion.h1>
             <motion.p
-              className="text-lg md:text-xl text-[#FDF5E6]/80 mb-8 font-display italic"
+              className="text-base md:text-xl text-[#FDF5E6]/80 mb-6 md:mb-8 font-display italic"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}
             >Step Into The Wild Side of Luxury</motion.p>
             <motion.div
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-row gap-3 sm:gap-4"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Link href="/menu" className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] px-8 py-4 font-bold text-black hover:bg-[#FDF5E6] transition-all shadow-[0_0_20px_rgba(243,208,107,0.3)]">
+              <Link href="/menu" className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] px-6 py-3 md:px-8 md:py-4 font-bold text-black text-sm md:text-base hover:bg-[#FDF5E6] transition-all shadow-[0_0_20px_rgba(243,208,107,0.3)]">
                 Explore Menu <ArrowRight size={18} />
               </Link>
-              <a href={`tel:+91${PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/30 px-8 py-4 font-bold text-[#FDF5E6] hover:bg-[#FDF5E6]/10 transition-all shadow-xl">
+              <a href={`tel:+91${PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/30 px-6 py-3 md:px-8 md:py-4 font-bold text-[#FDF5E6] text-sm md:text-base hover:bg-[#FDF5E6]/10 transition-all shadow-xl">
                 <Phone size={18} /> Call Now
               </a>
             </motion.div>
@@ -156,11 +156,11 @@ export default function HomePageClient() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="relative -mt-12 z-30 container pb-8">
+      <section className="relative -mt-10 md:-mt-12 z-30 container pb-8 px-4">
         <ScrollReveal>
           <div className="relative">
-            <div className="revolving-lottie">{EarthAnimationStats}</div>
-            <div className="bg-[#0D1C15] rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl shadow-2xl border border-[#FDF5E6]/10 p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 backdrop-blur-md relative z-10">
+            <div className="revolving-lottie hidden md:block">{EarthAnimationStats}</div>
+            <div className="bg-[#0D1C15] rounded-2xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl shadow-2xl border border-[#FDF5E6]/10 p-4 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 backdrop-blur-md relative z-10">
               {[
                 { value: "10k+", label: "Guests Served" },
                 { value: "40+", label: "Signature Drinks" },
@@ -168,8 +168,8 @@ export default function HomePageClient() {
                 { value: "1 AM", label: "Open Late" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center border-r last:border-0 border-[#FDF5E6]/10">
-                  <p className="text-2xl md:text-3xl font-display font-bold text-[#F3D06B]">{stat.value}</p>
-                  <p className="text-[11px] uppercase font-bold text-[#FDF5E6]/60 mt-1 tracking-widest">{stat.label}</p>
+                  <p className="text-xl md:text-3xl font-display font-bold text-[#F3D06B]">{stat.value}</p>
+                  <p className="text-[9px] md:text-[11px] uppercase font-bold text-[#FDF5E6]/60 mt-1 tracking-widest">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -178,7 +178,7 @@ export default function HomePageClient() {
       </section>
 
       {/* ── EXPERIENCE SECTION ── */}
-      <section className="relative py-20 bg-transparent">
+      <section className="relative py-12 md:py-20 bg-transparent">
         <div className="container">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -186,15 +186,15 @@ export default function HomePageClient() {
               <h2 className="text-3xl md:text-4xl font-display font-bold mt-2 text-[#FDF5E6]">Why Bagheera?</h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
             {[
               { icon: Sparkles, title: "Jungle Theme", desc: "North Delhi's only forest-inspired lounge with a mysterious aesthetic." },
               { icon: Music, title: "Live Vibes", desc: "From late-night DJ sets to acoustic evenings, the music never stops." },
               { icon: UtensilsCrossed, title: "Gourmet Kitchen", desc: "Authentic North Indian, Chinese, and Italian delicacies." },
             ].map((f, i) => (
               <ScrollReveal key={f.title} delay={i * 0.1}>
-                <div className="relative p-10 rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl bg-[#0D1C15] border border-[#FDF5E6]/10 text-center group hover:shadow-[0_8px_30px_rgba(243,208,107,0.1)] transition-all duration-300">
-                  <div className="revolving-lottie" style={{ animationDelay: `${i * -5.3}s` }}>
+                <div className="relative p-6 md:p-10 rounded-2xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl bg-[#0D1C15] border border-[#FDF5E6]/10 text-center group hover:shadow-[0_8px_30px_rgba(243,208,107,0.1)] transition-all duration-300">
+                  <div className="revolving-lottie hidden md:block" style={{ animationDelay: `${i * -5.3}s` }}>
                     {i === 0 ? EarthAnimation1 : i === 1 ? EarthAnimation2 : EarthAnimation3}
                   </div>
                   <div className="w-16 h-16 rounded-2xl bg-[#F3D06B]/10 flex items-center justify-center mb-6 mx-auto group-hover:bg-[#F3D06B]/20 transition-colors">
@@ -210,17 +210,17 @@ export default function HomePageClient() {
       </section>
 
       {/* ── SPECIALTIES ── */}
-      <section className="relative py-20 bg-[#0D1C15]/50">
+      <section className="relative py-12 md:py-20 bg-[#0D1C15]/50">
         <div className="container">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 text-center uppercase text-[#FDF5E6]">Chef&apos;s Picks</h2>
+            <h2 className="text-2xl md:text-4xl font-display font-bold mb-8 md:mb-12 text-center uppercase text-[#FDF5E6]">Chef&apos;s Picks</h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {specialties.map((s, i) => (
               <ScrollReveal key={s.name} delay={i * 0.1}>
                 <div className="flex flex-col items-center group cursor-pointer relative">
-                  <div className="w-full relative z-10 overflow-hidden bg-[#0D1C15] border border-[#F3D06B]/40 group-hover:shadow-[0_8px_30px_rgba(243,208,107,0.25)] transition-all duration-300 rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl">
-                    <div className="relative h-52 overflow-hidden">
+                  <div className="w-full relative z-10 overflow-hidden bg-[#0D1C15] border border-[#F3D06B]/40 group-hover:shadow-[0_8px_30px_rgba(243,208,107,0.25)] transition-all duration-300 rounded-xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl">
+                    <div className="relative h-32 md:h-52 overflow-hidden">
                       <Image
                         src={s.img}
                         alt={s.name}
@@ -228,16 +228,16 @@ export default function HomePageClient() {
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
-                      <div className="absolute top-4 left-6 bg-[#F3D06B] text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">{s.tag}</div>
+                      <div className="absolute top-2 left-3 md:top-4 md:left-6 bg-[#F3D06B] text-black text-[8px] md:text-[10px] font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full uppercase tracking-wider shadow-lg">{s.tag}</div>
                     </div>
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-1">
-                        <h3 className="font-display font-bold text-lg text-[#FDF5E6]">{s.name}</h3>
-                        <span className="text-sm font-black text-[#F3D06B]">{s.price}</span>
+                    <div className="p-3 md:p-6">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 gap-0.5">
+                        <h3 className="font-display font-bold text-xs md:text-lg text-[#FDF5E6] leading-tight">{s.name}</h3>
+                        <span className="text-xs md:text-sm font-black text-[#F3D06B]">{s.price}</span>
                       </div>
                     </div>
                   </div>
-                  <div className="w-24 -mt-2 relative z-0 origin-top transition-transform duration-500 group-hover:rotate-6 opacity-90">
+                  <div className="w-16 md:w-24 -mt-2 relative z-0 origin-top transition-transform duration-500 group-hover:rotate-6 opacity-90">
                     <Lottie animationData={hangingPotAnimation} loop={true} />
                   </div>
                 </div>
@@ -248,29 +248,29 @@ export default function HomePageClient() {
       </section>
 
       {/* ── OUR STORY ── */}
-      <section className="relative py-24 overflow-hidden bg-transparent">
-        <div className="container grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="relative py-12 md:py-24 overflow-hidden bg-transparent">
+        <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <ScrollReveal direction="left">
             <div className="relative mt-8 md:mt-0">
               <Image
                 src={gallery1}
                 alt="Bagheera Ambiance"
                 width={600} height={400}
-                className="w-full h-96 object-cover shadow-[0_8px_30px_rgba(243,208,107,0.15)] border border-[#F3D06B]/40 rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl transition-transform duration-500 hover:scale-[1.02]"
+                className="w-full h-64 md:h-96 object-cover shadow-[0_8px_30px_rgba(243,208,107,0.15)] border border-[#F3D06B]/40 rounded-2xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl transition-transform duration-500 hover:scale-[1.02]"
               />
               <Image
                 src={gallery2}
                 alt="Lounge vibes"
                 width={200} height={200}
-                className="absolute -bottom-8 -right-4 md:-right-8 w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-[#0A0F0D] shadow-2xl rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-lg rounded-bl-lg"
+                className="absolute -bottom-8 -right-4 md:-right-8 w-28 h-28 md:w-48 md:h-48 object-cover border-4 border-[#0A0F0D] shadow-2xl rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg"
               />
             </div>
           </ScrollReveal>
           <ScrollReveal direction="right">
-            <div className="md:pl-8 mt-12 md:mt-0">
+            <div className="md:pl-8 mt-6 md:mt-0">
               <span className="text-[#F3D06B] text-xs font-black uppercase tracking-widest">Our Story</span>
-              <h2 className="text-3xl md:text-5xl font-display font-bold mt-3 mb-6 uppercase text-[#FDF5E6]">Step Into The Wild</h2>
-              <p className="text-[#FDF5E6]/70 text-sm leading-relaxed mb-8 text-justify italic">Born from a love for adventure, Bagheera brings the mystery of the jungle to Hudson Lane. We provide an escape from the city heat with signature flavors, exotic cocktails, and an electric lounge experience designed for the untamed.</p>
+              <h2 className="text-2xl md:text-5xl font-display font-bold mt-3 mb-4 md:mb-6 uppercase text-[#FDF5E6]">Step Into The Wild</h2>
+              <p className="text-[#FDF5E6]/70 text-sm leading-relaxed mb-6 md:mb-8 text-justify italic">Born from a love for adventure, Bagheera brings the mystery of the jungle to Hudson Lane. We provide an escape from the city heat with signature flavors, exotic cocktails, and an electric lounge experience designed for the untamed.</p>
               <Link href="/menu" className="group inline-flex items-center gap-3 text-[#F3D06B] font-bold text-sm hover:text-[#FDF5E6] transition-colors uppercase tracking-widest">
                 Explore The Full Menu
                 <span className="w-8 h-8 rounded-full bg-[#F3D06B]/10 group-hover:bg-[#FDF5E6]/10 flex items-center justify-center transition-colors">
@@ -283,16 +283,16 @@ export default function HomePageClient() {
       </section>
 
       {/* ── LOCATION SECTION ── */}
-      <section className="relative py-24 container bg-transparent">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <section className="relative py-12 md:py-24 container bg-transparent">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
           <ScrollReveal direction="left">
-            <div className="space-y-10">
+            <div className="space-y-6 md:space-y-10">
               <div>
                 <span className="text-[#F3D06B] text-xs font-black tracking-widest uppercase">Find Us</span>
-                <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tighter text-[#FDF5E6] mt-2">Visit The Jungle</h2>
+                <h2 className="text-2xl md:text-5xl font-display font-bold uppercase tracking-tighter text-[#FDF5E6] mt-2">Visit The Jungle</h2>
               </div>
               <div className="space-y-4">
-                <a href={MAPS_SEARCH_URL} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-lg rounded-bl-lg bg-[#0D1C15] border border-[#FDF5E6]/10 hover:border-[#F3D06B]/50 transition-all relative z-10">
+                <a href={MAPS_SEARCH_URL} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-[#0D1C15] border border-[#FDF5E6]/10 hover:border-[#F3D06B]/50 transition-all relative z-10">
                   <div className="w-14 h-14 rounded-xl bg-[#F3D06B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#F3D06B] transition-colors">
                     <MapPin size={24} className="text-[#F3D06B] group-hover:text-black" />
                   </div>
@@ -301,12 +301,12 @@ export default function HomePageClient() {
                     <p className="text-[#FDF5E6] text-sm font-bold leading-relaxed">{ADDRESS}</p>
                   </div>
                 </a>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <a href={`tel:+91${PHONE}`} className="group flex items-center gap-4 p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-lg rounded-bl-lg bg-[#F3D06B] text-black hover:bg-[#FDF5E6] shadow-lg relative z-10">
+                <div className="grid grid-cols-2 gap-3 md:gap-4 pt-2">
+                  <a href={`tel:+91${PHONE}`} className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-[#F3D06B] text-black hover:bg-[#FDF5E6] shadow-lg relative z-10">
                     <Phone size={20} />
                     <div><h4 className="font-bold text-[9px] uppercase opacity-60 mb-1">Call Now</h4><p className="font-bold text-sm">{PHONE_DISPLAY}</p></div>
                   </a>
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 p-6 rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-lg rounded-bl-lg bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-lg relative z-10">
+                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-lg relative z-10">
                     <Instagram size={24} />
                     <div><h4 className="font-bold text-[9px] uppercase opacity-80 mb-1">Follow Us</h4><p className="font-bold text-sm">@bagheera</p></div>
                   </a>
@@ -315,7 +315,7 @@ export default function HomePageClient() {
             </div>
           </ScrollReveal>
           <ScrollReveal direction="right">
-            <div className="rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl overflow-hidden border-4 border-[#0D1C15] h-[500px] bg-[#0D1C15] relative z-10">
+            <div className="rounded-2xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl overflow-hidden border-4 border-[#0D1C15] h-[300px] md:h-[500px] bg-[#0D1C15] relative z-10">
               <iframe
                 src={MAPS_EMBED}
                 width="100%" height="100%"
@@ -330,13 +330,13 @@ export default function HomePageClient() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="relative py-24 bg-[#0D1C15]/80 overflow-hidden text-center backdrop-blur-sm">
+      <section className="relative py-14 md:py-24 bg-[#0D1C15]/80 overflow-hidden text-center backdrop-blur-sm">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-[#FDF5E6] mb-6 uppercase tracking-tight">Hungry for the Wild?</h2>
-          <p className="text-[#FDF5E6]/60 mb-10 text-base max-w-lg mx-auto leading-relaxed">Visit us in Hudson Lane or book your table now for an unforgettable experience.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`tel:+91${PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] text-black px-10 py-5 font-bold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(243,208,107,0.2)]">Call for Reservations</a>
-            <Link href="/menu" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/20 text-[#FDF5E6] px-10 py-5 font-bold hover:bg-[#FDF5E6]/5 transition-colors">Explore The Menu</Link>
+          <h2 className="text-2xl md:text-5xl font-display font-bold text-[#FDF5E6] mb-4 md:mb-6 uppercase tracking-tight px-4">Hungry for the Wild?</h2>
+          <p className="text-[#FDF5E6]/60 mb-8 md:mb-10 text-sm md:text-base max-w-lg mx-auto leading-relaxed px-4">Visit us in Hudson Lane or book your table now for an unforgettable experience.</p>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-6">
+            <a href={`tel:+91${PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] text-black px-8 py-4 md:px-10 md:py-5 font-bold text-sm md:text-base hover:scale-105 transition-transform shadow-[0_0_20px_rgba(243,208,107,0.2)]">Call for Reservations</a>
+            <Link href="/menu" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/20 text-[#FDF5E6] px-8 py-4 md:px-10 md:py-5 font-bold text-sm md:text-base hover:bg-[#FDF5E6]/5 transition-colors">Explore The Menu</Link>
           </div>
         </ScrollReveal>
       </section>

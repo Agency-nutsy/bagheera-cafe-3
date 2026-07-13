@@ -12,11 +12,11 @@ const Footer = () => (
   <footer className="bg-[#0A0F0D] text-[#FDF5E6] relative overflow-hidden bg-grain">
     <div className="absolute top-0 left-0 right-0 h-[1px] bg-[#FDF5E6]/10" />
 
-    <div className="container py-16 relative z-10">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div className="container py-10 md:py-16 relative z-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
 
         {/* Brand Section */}
-        <div className="md:col-span-1">
+        <div className="col-span-2 md:col-span-1">
           <h3 className="font-display text-3xl font-bold mb-4 tracking-tight text-[#FDF5E6]">
             Bagheera
           </h3>
@@ -88,7 +88,7 @@ const Footer = () => (
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-[#FDF5E6]/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="border-t border-[#FDF5E6]/10 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-[10px] text-[#FDF5E6]/40 tracking-widest uppercase">
           © {new Date().getFullYear()} Bagheera Cafe &amp; Lounge
         </p>

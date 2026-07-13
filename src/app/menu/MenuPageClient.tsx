@@ -432,7 +432,7 @@ export default function MenuPageClient() {
 
   return (
     <div
-      className="pt-[80px] pb-20 min-h-screen select-none relative bg-[#0A0F0D]"
+      className="pt-[64px] md:pt-[80px] pb-12 md:pb-20 min-h-screen select-none relative bg-[#0A0F0D]"
       style={{ backgroundImage: "radial-gradient(circle at 50% 40%, #0D1C15 0%, #0A0F0D 100%)" }}
     >
       {/* 🌿 GRASS BACKGROUND */}
@@ -481,27 +481,27 @@ export default function MenuPageClient() {
       `}</style>
 
       {/* ── STICKY CATEGORY NAV ── */}
-      <nav className="fixed top-[64px] md:top-[80px] left-0 right-0 z-30 bg-[#0A0F0D]/95 backdrop-blur-md border-b-2 border-[#F3D06B]/20 py-4 shadow-2xl">
-        <div className="absolute top-full left-2 md:left-8 w-16 md:w-20 z-0 origin-top opacity-90 pointer-events-none">
+      <nav className="fixed top-[64px] md:top-[80px] left-0 right-0 z-30 bg-[#0A0F0D]/95 backdrop-blur-md border-b-2 border-[#F3D06B]/20 py-2 md:py-4 shadow-2xl">
+        <div className="absolute top-full left-2 md:left-8 w-12 md:w-20 z-0 origin-top opacity-90 pointer-events-none hidden md:block">
           <Lottie animationData={hangingPotAnimation} loop={true} />
         </div>
-        <div className="absolute top-full right-2 md:right-8 w-16 md:w-20 z-0 origin-top opacity-90 pointer-events-none">
+        <div className="absolute top-full right-2 md:right-8 w-12 md:w-20 z-0 origin-top opacity-90 pointer-events-none hidden md:block">
           <Lottie animationData={hangingPotAnimation} loop={true} />
         </div>
         <div className="container px-4 relative z-10 mask-fade-edges">
-          <div ref={scrollContainerRef} className="flex flex-row gap-3 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-2">
+          <div ref={scrollContainerRef} className="flex flex-row gap-2 md:gap-3 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-1 md:pb-2">
             {menuData.map((cat) => (
               <button
                 key={cat.id}
                 data-id={cat.id}
                 onClick={() => handleCategoryClick(cat.id)}
-                className={`px-6 py-3 rounded-full text-[13px] font-black uppercase transition-all flex-shrink-0 snap-start flex items-center gap-3 border-2 ${
+                className={`px-3 py-2 md:px-6 md:py-3 rounded-full text-[11px] md:text-[13px] font-black uppercase transition-all flex-shrink-0 snap-start flex items-center gap-1.5 md:gap-3 border-2 ${
                   activeCategory === cat.id
                     ? "bg-[#F3D06B] text-black border-[#F3D06B] shadow-[0_0_15px_rgba(243,208,107,0.4)] scale-105"
                     : "bg-[#FDF5E6]/5 text-[#FDF5E6]/60 border-transparent hover:bg-[#FDF5E6]/10 hover:text-[#FDF5E6]"
                 }`}
               >
-                <span className="text-xl">{cat.emoji}</span>
+                <span className="text-base md:text-xl">{cat.emoji}</span>
                 <span>{cat.category}</span>
               </button>
             ))}
@@ -510,13 +510,13 @@ export default function MenuPageClient() {
       </nav>
 
       {/* ── MENU HEADER ── */}
-      <div className="pt-32 md:pt-40 pb-10 text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-display font-black text-[#FDF5E6] uppercase tracking-tighter">Bagheera Menu</h1>
+      <div className="pt-24 md:pt-40 pb-6 md:pb-10 text-center relative z-10">
+        <h1 className="text-3xl md:text-7xl font-display font-black text-[#FDF5E6] uppercase tracking-tighter">Bagheera Menu</h1>
       </div>
 
       <div className="container relative mt-12 z-10">
         <main className="w-full">
-          <div className="space-y-32">
+          <div className="space-y-16 md:space-y-32">
             {menuData.map((cat) => (
               <div
                 key={cat.id}
@@ -524,19 +524,19 @@ export default function MenuPageClient() {
                 ref={(el) => { sectionRefs.current[cat.id] = el; }}
                 className="space-y-12 scroll-mt-[200px]"
               >
-                <div className="flex items-center gap-6 border-l-4 border-[#F3D06B] pl-6">
-                  <span className="text-5xl">{cat.emoji}</span>
-                  <h2 className="text-4xl md:text-5xl font-display font-black uppercase text-[#FDF5E6] tracking-tight">{cat.category}</h2>
+                <div className="flex items-center gap-4 md:gap-6 border-l-4 border-[#F3D06B] pl-4 md:pl-6">
+                  <span className="text-3xl md:text-5xl">{cat.emoji}</span>
+                  <h2 className="text-2xl md:text-5xl font-display font-black uppercase text-[#FDF5E6] tracking-tight">{cat.category}</h2>
                 </div>
 
                 {cat.sections && cat.sections.map((section, sIdx) => (
-                  <div key={sIdx} className="bg-[#0D1C15]/80 p-8 md:p-14 rounded-[3.5rem] border border-[#FDF5E6]/10 shadow-2xl backdrop-blur-sm relative">
-                    <div className="revolving-panther">
+                  <div key={sIdx} className="bg-[#0D1C15]/80 p-4 md:p-14 rounded-2xl md:rounded-[3.5rem] border border-[#FDF5E6]/10 shadow-2xl backdrop-blur-sm relative">
+                    <div className="revolving-panther hidden md:block">
                       <Lottie animationData={catAnimation} loop={true} />
                     </div>
 
                     {section.title && (
-                      <h3 className={`text-[11px] font-black uppercase mb-10 flex items-center gap-3 ${
+                      <h3 className={`text-[10px] md:text-[11px] font-black uppercase mb-6 md:mb-10 flex items-center gap-3 ${
                         section.title.toLowerCase().includes("non-veg") ? "text-red-400" :
                         section.title.toLowerCase().includes("veg") ? "text-green-400" : "text-[#F3D06B]"
                       }`}>
@@ -549,24 +549,24 @@ export default function MenuPageClient() {
 
                     {cat.columns && cat.columns.length > 0 ? (
                       <div className="w-full">
-                        <div className="flex justify-between border-b-2 border-[#F3D06B]/50 pb-4 mb-6">
+                        <div className="flex justify-between border-b-2 border-[#F3D06B]/50 pb-3 md:pb-4 mb-4 md:mb-6">
                           <div className="flex-[2] font-black text-[#F3D06B] tracking-wider text-sm md:text-base uppercase">Item</div>
                           <div className="flex-[3] flex justify-end gap-2 md:gap-8">
                             {cat.columns.map((col, i) => (
-                              <div key={i} className="w-16 md:w-24 text-right font-black text-[#F3D06B] tracking-wider text-xs md:text-sm uppercase">{col}</div>
+                              <div key={i} className="w-14 md:w-24 text-right font-black text-[#F3D06B] tracking-wider text-[10px] md:text-sm uppercase">{col}</div>
                             ))}
                           </div>
                         </div>
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-4 md:gap-6">
                           {section.items.map((item, i) => (
-                            <div key={i} className="flex justify-between items-center border-b border-[#FDF5E6]/10 pb-4 text-[#FDF5E6] group hover:border-[#F3D06B]/30 transition-colors">
+                            <div key={i} className="flex justify-between items-center border-b border-[#FDF5E6]/10 pb-3 md:pb-4 text-[#FDF5E6] group hover:border-[#F3D06B]/30 transition-colors">
                               <div className="flex-[2] pr-2 md:pr-4">
-                                <h4 className="font-bold text-sm md:text-lg group-hover:text-[#F3D06B] transition-colors">{item.name}</h4>
+                                <h4 className="font-bold text-xs md:text-lg group-hover:text-[#F3D06B] transition-colors">{item.name}</h4>
                                 {item.desc && <p className="text-[10px] md:text-xs text-[#FDF5E6]/50 italic mt-1 font-light leading-relaxed">{item.desc}</p>}
                               </div>
-                              <div className="flex-[3] flex justify-end gap-2 md:gap-8">
+                              <div className="flex-[3] flex justify-end gap-1 md:gap-8">
                                 {item.prices?.map((price, pi) => (
-                                  <div key={pi} className="w-16 md:w-24 text-right font-black text-[#F3D06B] text-sm md:text-lg tabular-nums">
+                                  <div key={pi} className="w-14 md:w-24 text-right font-black text-[#F3D06B] text-xs md:text-lg tabular-nums">
                                     {price === "-" ? "-" : (typeof price === "number" ? `₹${price}` : price)}
                                   </div>
                                 ))}
@@ -576,14 +576,14 @@ export default function MenuPageClient() {
                         </div>
                       </div>
                     ) : (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 md:gap-y-10">
                         {section.items.map((item, i) => (
-                          <div key={i} className="flex justify-between border-b border-[#FDF5E6]/10 pb-6 text-[#FDF5E6] group transition-colors hover:border-[#F3D06B]/30 relative z-10">
+                          <div key={i} className="flex justify-between border-b border-[#FDF5E6]/10 pb-4 md:pb-6 text-[#FDF5E6] group transition-colors hover:border-[#F3D06B]/30 relative z-10">
                             <div className="flex-[3] pr-6">
-                              <h4 className="font-bold text-sm md:text-lg group-hover:text-[#F3D06B] transition-colors">{item.name}</h4>
+                              <h4 className="font-bold text-xs md:text-lg group-hover:text-[#F3D06B] transition-colors">{item.name}</h4>
                               {item.desc && <p className="text-[10px] md:text-xs text-[#FDF5E6]/50 italic mt-2 font-light leading-relaxed">{item.desc}</p>}
                             </div>
-                            <span className="font-black text-[#F3D06B] text-sm md:text-lg tabular-nums flex-shrink-0 flex-[1] text-right">
+                            <span className="font-black text-[#F3D06B] text-xs md:text-lg tabular-nums flex-shrink-0 flex-[1] text-right">
                               {item.price === "MRP" ? "MRP" : `₹${item.price}`}
                             </span>
                           </div>

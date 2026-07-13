@@ -41,7 +41,7 @@ export default function GalleryPageClient() {
   const filtered = filter === "All" ? images : images.filter((img) => img.cat === filter);
 
   return (
-    <div className="relative pt-28 pb-20 bg-[#0A0F0D] text-[#FDF5E6] min-h-screen">
+    <div className="relative pt-20 md:pt-28 pb-12 md:pb-20 bg-[#0A0F0D] text-[#FDF5E6] min-h-screen">
 
       {/* 🌿 GRASS BACKGROUND */}
       <div
@@ -58,7 +58,7 @@ export default function GalleryPageClient() {
         <ScrollReveal>
           <div className="text-center mb-12">
             <span className="text-[#F3D06B] text-sm font-semibold tracking-widest uppercase">Visuals</span>
-            <h1 className="text-4xl md:text-5xl font-display font-bold mt-2 text-[#FDF5E6]">Inside The Jungle</h1>
+            <h1 className="text-3xl md:text-5xl font-display font-bold mt-2 text-[#FDF5E6]">Inside The Jungle</h1>
             <p className="text-[#FDF5E6]/60 mt-3">Exquisite flavors, untamed vibes, and unforgettable nights.</p>
             <div className="section-divider max-w-xs mx-auto mt-6 bg-[#F3D06B]/20 h-[1px]" />
           </div>
@@ -66,7 +66,7 @@ export default function GalleryPageClient() {
 
         {/* Filters */}
         <ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 md:mb-10">
             {filters.map((f) => (
               <button
                 key={f}
@@ -84,7 +84,7 @@ export default function GalleryPageClient() {
         </ScrollReveal>
 
         {/* Grid */}
-        <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <motion.div layout className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-6">
           <AnimatePresence mode="popLayout">
             {filtered.map((img, i) => (
               <motion.div
@@ -94,7 +94,7 @@ export default function GalleryPageClient() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: i * 0.03 }}
-                className="overflow-hidden rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-lg rounded-bl-lg group aspect-square cursor-pointer relative bg-[#0D1C15] border border-[#F3D06B]/20"
+                className="overflow-hidden rounded-xl md:rounded-tl-[3rem] md:rounded-br-[3rem] md:rounded-tr-lg md:rounded-bl-lg group aspect-square cursor-pointer relative bg-[#0D1C15] border border-[#F3D06B]/20"
                 onClick={() => setSelected(img)}
               >
                 <Image
@@ -104,7 +104,7 @@ export default function GalleryPageClient() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-[#0A0F0D]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <div className="absolute inset-0 bg-[#0A0F0D]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 md:p-4">
                   <p className="text-[#FDF5E6] text-xs md:text-sm font-bold tracking-wide uppercase">{img.alt}</p>
                 </div>
               </motion.div>
@@ -116,14 +116,14 @@ export default function GalleryPageClient() {
         <AnimatePresence>
           {selected !== null && (
             <motion.div
-              className="fixed inset-0 z-[100] bg-[#0A0F0D]/95 backdrop-blur-sm flex items-center justify-center p-4 cursor-pointer"
+              className="fixed inset-0 z-[100] bg-[#0A0F0D]/95 backdrop-blur-sm flex items-center justify-center p-2 md:p-4 cursor-pointer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelected(null)}
             >
               <motion.div
-                className="relative max-h-[85vh] rounded-tl-[4rem] rounded-br-[4rem] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-[#F3D06B]/30"
+                className="relative max-h-[85vh] w-full md:w-auto rounded-xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-[#F3D06B]/30"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
@@ -137,7 +137,7 @@ export default function GalleryPageClient() {
                 />
               </motion.div>
               <button
-                className="absolute top-8 right-8 text-[#FDF5E6]/50 hover:text-[#F3D06B] transition-colors font-bold tracking-widest uppercase text-sm"
+                className="absolute top-4 right-4 md:top-8 md:right-8 text-[#FDF5E6]/50 hover:text-[#F3D06B] transition-colors font-bold tracking-widest uppercase text-sm bg-[#0A0F0D]/60 px-4 py-2 rounded-full"
                 onClick={() => setSelected(null)}
               >
                 Close ×

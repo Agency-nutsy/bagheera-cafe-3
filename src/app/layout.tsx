@@ -142,16 +142,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${playfairDisplay.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantSchema) }}
         />
       </head>
-      <body className="font-body antialiased bg-background text-foreground">
+      <body className="font-body antialiased bg-background text-foreground" suppressHydrationWarning>
         <AppShell>
-          <div className="flex flex-col min-h-screen">
+          <div className="flex flex-col min-h-screen overflow-x-hidden relative w-full">
             <ScrollToTop />
             <Navbar />
             <main className="flex-1">{children}</main>
@@ -165,3 +165,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+//this was made by Tushar
