@@ -7,10 +7,10 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import AppShell from "@/components/AppShell";
+import { BUSINESS_CONFIG } from "@/config/business";
 import bagheeraLogo from "@/assets/bagheera logo.png";
 import "./globals.css";
 
-// ── GOOGLE FONTS via next/font (no layout shift, self-hosted) ──
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -26,9 +26,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-// ── SITE-WIDE SEO DEFAULTS ──
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bagheeracafeandlounge.in"),
+  metadataBase: new URL(`https://${BUSINESS_CONFIG.domain}`),
   title: {
     default: "Bagheera Cafe & Lounge | Hudson Lane, Delhi",
     template: "%s | Bagheera Cafe & Lounge",
@@ -63,11 +62,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://bagheeracafeandlounge.in",
-    siteName: "Bagheera Cafe & Lounge",
-    title: "Bagheera Cafe & Lounge | Hudson Lane, Delhi",
-    description:
-      "Step into the jungle. Authentic flavors and signature cocktails at Hudson Lane, GTB Nagar, New Delhi.",
+    url: `https://${BUSINESS_CONFIG.domain}`,
+    siteName: BUSINESS_CONFIG.name,
+    title: `${BUSINESS_CONFIG.name} | Hudson Lane, Delhi`,
+    description: BUSINESS_CONFIG.description,
     images: [
       {
         url: bagheeraLogo.src,
@@ -79,9 +77,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bagheera Cafe & Lounge",
-    description: "Step into the jungle. Authentic flavors and signature cocktails at Hudson Lane.",
+    title: BUSINESS_CONFIG.name,
+    description: BUSINESS_CONFIG.description,
     images: [bagheeraLogo.src],
+  },
+  // TODO: Replace this with the actual client's GSC token before going live
+  verification: {
+    google: "xtBtDujpJR1-SPp3PlmIlGlZ2ytEvc3_f27JP2Cr_Go",
   },
   icons: {
     icon: bagheeraLogo.src,
@@ -90,49 +92,45 @@ export const metadata: Metadata = {
   },
 };
 
-// ── VIEWPORT (must be exported separately in Next.js 15) ──
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#0A0F0D",
 };
 
-// ── JSON-LD RESTAURANT SCHEMA ──
 const restaurantSchema = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  name: "Bagheera Cafe & Lounge",
-  image: "https://bagheeracafeandlounge.in/bagheera-logo.png",
-  url: "https://bagheeracafeandlounge.in",
-  servesCuisine: ["Multicuisine", "North Indian", "Chinese", "Italian"],
-  priceRange: "₹₹",
+  name: BUSINESS_CONFIG.name,
+  image: `https://${BUSINESS_CONFIG.domain}/bagheera-logo.png`,
+  url: `https://${BUSINESS_CONFIG.domain}`,
+  servesCuisine: BUSINESS_CONFIG.seo.cuisine,
+  priceRange: BUSINESS_CONFIG.seo.priceRange,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "2529, 2nd Floor, Hudson Lane, GTB Nagar",
-    addressLocality: "New Delhi",
-    addressRegion: "Delhi",
-    postalCode: "110009",
-    addressCountry: "IN",
+    streetAddress: BUSINESS_CONFIG.address.street,
+    addressLocality: BUSINESS_CONFIG.address.city,
+    addressRegion: BUSINESS_CONFIG.address.state,
+    postalCode: BUSINESS_CONFIG.address.zip,
+    addressCountry: BUSINESS_CONFIG.address.country,
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 28.6946494,
-    longitude: 77.2042514,
+    latitude: BUSINESS_CONFIG.coordinates.latitude,
+    longitude: BUSINESS_CONFIG.coordinates.longitude,
   },
-  telephone: "+91-09910192252",
+  telephone: BUSINESS_CONFIG.contact.phoneDisplay,
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
-      ],
-      opens: "11:00",
-      closes: "01:00",
+      dayOfWeek: BUSINESS_CONFIG.hours.days,
+      opens: BUSINESS_CONFIG.hours.open,
+      closes: BUSINESS_CONFIG.hours.close,
     },
   ],
-  hasMenu: "https://bagheeracafeandlounge.in/menu",
+  hasMenu: `https://${BUSINESS_CONFIG.domain}/menu`,
   sameAs: [
-    "https://www.instagram.com/bagheeracafelounge",
+    BUSINESS_CONFIG.social.instagram,
   ],
 };
 
@@ -165,5 +163,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-//this was made by Tushar

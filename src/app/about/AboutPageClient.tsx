@@ -4,6 +4,7 @@ import { Heart, Award, Users, Music } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LottieLib from "lottie-react";
 import Image from "next/image";
+import { BUSINESS_CONFIG } from "@/config/business";
 
 import earthAnimation from "@/assets/earth.json";
 import grassImg from "@/assets/grass.png";
@@ -23,8 +24,6 @@ const values = [
 export default function AboutPageClient() {
   return (
     <div className="relative pt-20 md:pt-28 pb-12 md:pb-20 bg-[#0A0F0D] text-[#FDF5E6] min-h-screen">
-
-      {/* 🌿 GRASS BACKGROUND */}
       <div
         className="fixed inset-0 z-0 pointer-events-none opacity-[0.15]"
         style={{
@@ -81,7 +80,7 @@ export default function AboutPageClient() {
               />
               <Image
                 src={gallery2}
-                alt="Signature Dish"
+                alt="Bagheera Signature Pizza in Hudson Lane"
                 className="absolute -bottom-6 -right-4 w-28 h-28 md:w-40 md:h-40 object-cover rounded-2xl border-4 border-[#0A0F0D] shadow-2xl hidden md:block"
                 width={160}
                 height={160}
@@ -91,18 +90,18 @@ export default function AboutPageClient() {
           <ScrollReveal direction="right">
             <div className="space-y-4 md:space-y-5 text-[#FDF5E6]/70 leading-relaxed text-sm md:text-base text-justify">
               <p>
-                Bagheera Cafe &amp; Lounge was established with a singular vision: to bring a premium, themed lounge
+                {BUSINESS_CONFIG.name} was established with a singular vision: to bring a premium, themed lounge
                 experience to the heart of GTB Nagar. Nestled in the bustling lanes of Hudson Lane, we&apos;ve created
                 a &quot;Jungle-Luxe&quot; escape where nature-inspired aesthetics meet modern luxury.
               </p>
               <p>
-                Whether you are here for our legendary Moradabadi Yakhni Biryani or our signature &quot;Bagheer
+                Whether you are here for our legendary Moradabadi Yakhni Biryani or our signature &quot;Bagheera
                 Sangriya,&quot; our kitchen serves a multicuisine spread that caters to every craving. We pride
                 ourselves on being more than just a lounge; we are a community hub known for vibrant flavors, live
                 music, and the warmest hospitality in North Campus.
               </p>
               <p className="font-medium text-[#F3D06B]">
-                At Bagheera, every visit is an adventure—a perfect blend of gourmet dining and an electric nightlife experience.
+                At {BUSINESS_CONFIG.name.split(" ")[0]}, every visit is an adventure—a perfect blend of gourmet dining and an electric nightlife experience.
               </p>
             </div>
           </ScrollReveal>

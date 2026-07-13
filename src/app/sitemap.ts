@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 
+import { BUSINESS_CONFIG } from "@/config/business";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://bagheeracafeandlounge.in";
+  const baseUrl = `https://${BUSINESS_CONFIG.domain}`;
   const lastModified = new Date();
 
   return [

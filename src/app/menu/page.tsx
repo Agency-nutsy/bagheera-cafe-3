@@ -3,6 +3,8 @@ import MenuPageClient from "./MenuPageClient";
 
 export const dynamic = "force-static";
 
+import { BUSINESS_CONFIG } from "@/config/business";
+
 export const metadata: Metadata = {
   title: "Our Menu",
   description:
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
     title: "Our Menu | Bagheera Cafe & Lounge",
     description:
       "Browse our complete food menu and bar menu. From Momos to Single Malts, Biryani to Bagheera Cocktails — all at Hudson Lane, GTB Nagar.",
-    url: "https://bagheeracafeandlounge.in/menu",
+    url: `https://${BUSINESS_CONFIG.domain}/menu`,
+  },
+  alternates: {
+    canonical: `https://${BUSINESS_CONFIG.domain}/menu`,
   },
 };
 

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { BUSINESS_CONFIG } from "@/config/business";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -7,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://bagheeracafeandlounge.in/sitemap.xml",
+    sitemap: `https://${BUSINESS_CONFIG.domain}/sitemap.xml`,
   };
 }

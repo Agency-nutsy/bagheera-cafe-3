@@ -7,6 +7,7 @@ import { UtensilsCrossed, Music, ArrowRight, MapPin, Phone, Sparkles, Instagram 
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import LottieLib, { useLottie } from "lottie-react";
+import { BUSINESS_CONFIG } from "@/config/business";
 
 // ── Asset imports (Next.js bundles these automatically) ──
 import earthAnimation from "@/assets/earth.json";
@@ -23,13 +24,6 @@ import gallery1 from "@/assets/full.webp";
 import gallery2 from "@/assets/tikka.webp";
 
 const Lottie = (LottieLib as any).default ?? LottieLib;
-
-const PHONE = "09910192252";
-const PHONE_DISPLAY = "099101 92252";
-const INSTAGRAM_URL = "https://www.instagram.com/bagheeracafelounge/?hl=en";
-const ADDRESS = "2529, 2nd Floor, Hudson Lane, GTB Nagar, New Delhi, Delhi 110033";
-const MAPS_SEARCH_URL = "https://www.google.com/maps/place/Bagheera+Cafe+%26+Lounge/@28.6946494,77.2042514,17z";
-const MAPS_EMBED = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.8327455165877!2d77.20425139999999!3d28.6946494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdf094b1ae2f%3A0xb37be3005f8e6407!2sBagheera%20Cafe%20%26%20Lounge!5e0!3m2!1sen!2sin!4v1773419478007!5m2!1sen!2sin";
 
 const heroSlides = [heroSlide1, heroSlide2, heroSlide3];
 
@@ -292,32 +286,25 @@ export default function HomePageClient() {
                 <h2 className="text-2xl md:text-5xl font-display font-bold uppercase tracking-tighter text-[#FDF5E6] mt-2">Visit The Jungle</h2>
               </div>
               <div className="space-y-4">
-                <a href={MAPS_SEARCH_URL} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-[#0D1C15] border border-[#FDF5E6]/10 hover:border-[#F3D06B]/50 transition-all relative z-10">
-                  <div className="w-14 h-14 rounded-xl bg-[#F3D06B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#F3D06B] transition-colors">
-                    <MapPin size={24} className="text-[#F3D06B] group-hover:text-black" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-black text-[10px] uppercase text-[#F3D06B] mb-1">Our Location</h4>
-                    <p className="text-[#FDF5E6] text-sm font-bold leading-relaxed">{ADDRESS}</p>
-                  </div>
-                </a>
-                <div className="grid grid-cols-2 gap-3 md:gap-4 pt-2">
-                  <a href={`tel:+91${PHONE}`} className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-[#F3D06B] text-black hover:bg-[#FDF5E6] shadow-lg relative z-10">
-                    <Phone size={20} />
-                    <div><h4 className="font-bold text-[9px] uppercase opacity-60 mb-1">Call Now</h4><p className="font-bold text-sm">{PHONE_DISPLAY}</p></div>
+                  <a href={BUSINESS_CONFIG.maps.link} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-[#0D1C15] border border-[#F3D06B]/20 hover:border-[#F3D06B]/60 transition-colors shadow-lg relative z-10">
+                    <MapPin size={24} className="text-[#F3D06B]" />
+                    <div><h4 className="font-bold text-[9px] uppercase tracking-widest text-[#F3D06B] mb-1">Locate Us</h4><p className="text-xs text-[#FDF5E6]/80 line-clamp-1">{BUSINESS_CONFIG.address.full}</p></div>
                   </a>
-                  <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-lg relative z-10">
+                  <a href={`tel:${BUSINESS_CONFIG.contact.phone}`} className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-[#0D1C15] border border-[#F3D06B]/20 hover:border-[#F3D06B]/60 transition-colors shadow-lg relative z-10">
+                    <Phone size={20} className="text-[#F3D06B]" />
+                    <div><h4 className="font-bold text-[9px] uppercase tracking-widest text-[#F3D06B] mb-1">Call Now</h4><p className="text-xs text-[#FDF5E6]/80">{BUSINESS_CONFIG.contact.phoneDisplay}</p></div>
+                  </a>
+                  <a href={BUSINESS_CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl md:rounded-tl-[2.5rem] md:rounded-br-[2.5rem] md:rounded-tr-lg md:rounded-bl-lg bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-lg relative z-10">
                     <Instagram size={24} />
                     <div><h4 className="font-bold text-[9px] uppercase opacity-80 mb-1">Follow Us</h4><p className="font-bold text-sm">@bagheera</p></div>
                   </a>
-                </div>
               </div>
             </div>
           </ScrollReveal>
           <ScrollReveal direction="right">
             <div className="rounded-2xl md:rounded-tl-[4rem] md:rounded-br-[4rem] md:rounded-tr-xl md:rounded-bl-xl overflow-hidden border-4 border-[#0D1C15] h-[300px] md:h-[500px] bg-[#0D1C15] relative z-10">
               <iframe
-                src={MAPS_EMBED}
+                src={BUSINESS_CONFIG.maps.embed}
                 width="100%" height="100%"
                 style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(80%)" }}
                 allowFullScreen loading="lazy"
@@ -335,7 +322,7 @@ export default function HomePageClient() {
           <h2 className="text-2xl md:text-5xl font-display font-bold text-[#FDF5E6] mb-4 md:mb-6 uppercase tracking-tight px-4">Hungry for the Wild?</h2>
           <p className="text-[#FDF5E6]/60 mb-8 md:mb-10 text-sm md:text-base max-w-lg mx-auto leading-relaxed px-4">Visit us in Hudson Lane or book your table now for an unforgettable experience.</p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-6">
-            <a href={`tel:+91${PHONE}`} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] text-black px-8 py-4 md:px-10 md:py-5 font-bold text-sm md:text-base hover:scale-105 transition-transform shadow-[0_0_20px_rgba(243,208,107,0.2)]">Call for Reservations</a>
+            <a href={`tel:+91${BUSINESS_CONFIG.contact.phone}`} className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F3D06B] text-black px-8 py-4 md:px-10 md:py-5 font-bold text-sm md:text-base hover:scale-105 transition-transform shadow-[0_0_20px_rgba(243,208,107,0.2)]">Call for Reservations</a>
             <Link href="/menu" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#FDF5E6]/20 text-[#FDF5E6] px-8 py-4 md:px-10 md:py-5 font-bold text-sm md:text-base hover:bg-[#FDF5E6]/5 transition-colors">Explore The Menu</Link>
           </div>
         </ScrollReveal>

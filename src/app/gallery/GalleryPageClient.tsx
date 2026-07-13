@@ -24,7 +24,7 @@ const images: { src: StaticImageData; alt: string; cat: string }[] = [
   { src: gallery1, alt: "Jungle Luxe Lounge", cat: "Vibe" },
   { src: biryaniImg, alt: "Yakhni Biryani", cat: "Food" },
   { src: gallery2, alt: "Signature Platters", cat: "Food" },
-  { src: drinkImg, alt: "Bagheer Sangriya", cat: "Drinks" },
+  { src: drinkImg, alt: "Bagheera Sangriya", cat: "Drinks" },
   { src: gallery3, alt: "Forest Inspired Decor", cat: "Vibe" },
   { src: gallery4, alt: "Live DJ Sessions", cat: "Vibe" },
   { src: gallery6, alt: "Tropical Mocktails", cat: "Drinks" },
@@ -43,7 +43,6 @@ export default function GalleryPageClient() {
   return (
     <div className="relative pt-20 md:pt-28 pb-12 md:pb-20 bg-[#0A0F0D] text-[#FDF5E6] min-h-screen">
 
-      {/* 🌿 GRASS BACKGROUND */}
       <div
         className="fixed inset-0 z-0 pointer-events-none opacity-[0.15]"
         style={{

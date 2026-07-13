@@ -2,10 +2,11 @@
 
 import { motion } from "framer-motion";
 import { MapPin, MessageCircle } from "lucide-react";
+import { BUSINESS_CONFIG } from "@/config/business";
 
 const WhatsAppButton = () => {
-  const directionsUrl = "https://www.google.com/maps/search/?api=1&query=Bagheera+Cafe+%26+Lounge+Hudson+Lane+Delhi";
-  const whatsappUrl = "https://wa.me/919910192252";
+  const directionsUrl = BUSINESS_CONFIG.maps.link;
+  const whatsappUrl = BUSINESS_CONFIG.contact.whatsapp;
 
   return (
     <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999] flex flex-col gap-3 md:gap-4">

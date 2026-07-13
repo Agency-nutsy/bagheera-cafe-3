@@ -3,6 +3,8 @@ import AboutPageClient from "./AboutPageClient";
 
 export const dynamic = "force-static";
 
+import { BUSINESS_CONFIG } from "@/config/business";
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
     title: "About Us | Bagheera Cafe & Lounge",
     description:
       "The legend of Bagheera — where the wild meets the sophisticated in North Delhi's premier jungle-themed lounge.",
-    url: "https://bagheeracafeandlounge.in/about",
+    url: `https://${BUSINESS_CONFIG.domain}/about`,
+  },
+  alternates: {
+    canonical: `https://${BUSINESS_CONFIG.domain}/about`,
   },
 };
 

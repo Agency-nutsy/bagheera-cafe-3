@@ -2,11 +2,7 @@
 
 import Link from "next/link";
 import { Instagram, Phone, MapPin } from "lucide-react";
-
-const PHONE = "09910192252";
-const PHONE_DISPLAY = "099101 92252";
-const ADDRESS = "2529, 2nd Floor, Hudson Lane, GTB Nagar, New Delhi, 110033";
-const MAPS_LINK = "https://www.google.com/maps/place/Bagheera+Cafe+%26+Lounge/@28.6946494,77.2042514,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfdf094b1ae2f:0xb37be3005f8e6407!8m2!3d28.6946494!4d77.2042514!16s%2Fg%2F11tnkym4w9?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D";
+import { BUSINESS_CONFIG } from "@/config/business";
 
 const Footer = () => (
   <footer className="bg-[#0A0F0D] text-[#FDF5E6] relative overflow-hidden bg-grain">
@@ -25,7 +21,7 @@ const Footer = () => (
           </p>
           <div className="flex gap-3">
             <a
-              href="https://www.instagram.com/bagheeracafelounge"
+              href={BUSINESS_CONFIG.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-[#F3D06B]/10 flex items-center justify-center text-[#F3D06B] hover:bg-[#F3D06B] hover:text-black transition-all duration-500"
@@ -72,15 +68,15 @@ const Footer = () => (
           <h4 className="font-semibold mb-6 text-[10px] uppercase tracking-[0.2em] text-[#F3D06B]">Contact</h4>
           <ul className="space-y-4 text-sm text-[#FDF5E6]/70">
             <li>
-              <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-[#F3D06B] transition-colors">
+              <a href={BUSINESS_CONFIG.maps.link} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:text-[#F3D06B] transition-colors">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-[#F3D06B]" />
-                <span className="leading-relaxed">{ADDRESS}</span>
+                <span className="leading-relaxed">{BUSINESS_CONFIG.address.full}</span>
               </a>
             </li>
             <li>
-              <a href={`tel:${PHONE}`} className="flex items-center gap-3 hover:text-[#F3D06B] transition-colors">
+              <a href={`tel:${BUSINESS_CONFIG.contact.phone}`} className="flex items-center gap-3 hover:text-[#F3D06B] transition-colors">
                 <Phone size={16} className="shrink-0 text-[#F3D06B]" />
-                <span>{PHONE_DISPLAY}</span>
+                <span>{BUSINESS_CONFIG.contact.phoneDisplay}</span>
               </a>
             </li>
           </ul>
@@ -93,7 +89,7 @@ const Footer = () => (
           © {new Date().getFullYear()} Bagheera Cafe &amp; Lounge
         </p>
         <p className="text-[10px] text-[#FDF5E6]/40 tracking-widest uppercase">
-          Open Daily: 11:00 AM – 01:00 AM
+          Open Daily: {BUSINESS_CONFIG.hours.open} – {BUSINESS_CONFIG.hours.close}
         </p>
       </div>
     </div>

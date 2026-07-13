@@ -5,8 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const PHONE = "09910192252";
+import { BUSINESS_CONFIG } from "@/config/business";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -151,7 +150,7 @@ const Navbar = () => {
               transition={{ delay: 0.15 }}
             >
               <a
-                href={`tel:${PHONE}`}
+                href={`tel:${BUSINESS_CONFIG.contact.phone}`}
                 onClick={() => setOpen(false)}
                 style={{ fontFamily: "'Lato', sans-serif" }}
                 className="flex items-center justify-center gap-2 py-4 px-4 rounded-xl bg-[#F3D06B] text-black text-sm font-black text-center mt-4 shadow-[0_0_20px_rgba(243,208,107,0.4)] uppercase tracking-widest"

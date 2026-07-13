@@ -3,6 +3,8 @@ import ContactPageClient from "./ContactPageClient";
 
 export const dynamic = "force-static";
 
+import { BUSINESS_CONFIG } from "@/config/business";
+
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
     title: "Contact Us | Bagheera Cafe & Lounge",
     description:
       "Ready to step into the jungle? Book a table, WhatsApp us, or visit us at 2529, Hudson Lane, GTB Nagar, New Delhi.",
-    url: "https://bagheeracafeandlounge.in/contact",
+    url: `https://${BUSINESS_CONFIG.domain}/contact`,
+  },
+  alternates: {
+    canonical: `https://${BUSINESS_CONFIG.domain}/contact`,
   },
 };
 

@@ -3,6 +3,8 @@ import GalleryPageClient from "./GalleryPageClient";
 
 export const dynamic = "force-static";
 
+import { BUSINESS_CONFIG } from "@/config/business";
+
 export const metadata: Metadata = {
   title: "Gallery",
   description:
@@ -11,7 +13,10 @@ export const metadata: Metadata = {
     title: "Gallery | Bagheera Cafe & Lounge",
     description:
       "Exquisite flavors, untamed vibes, and unforgettable nights — inside the jungle at Hudson Lane.",
-    url: "https://bagheeracafeandlounge.in/gallery",
+    url: `https://${BUSINESS_CONFIG.domain}/gallery`,
+  },
+  alternates: {
+    canonical: `https://${BUSINESS_CONFIG.domain}/gallery`,
   },
 };
 
