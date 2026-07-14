@@ -66,29 +66,22 @@ export const metadata: Metadata = {
     siteName: BUSINESS_CONFIG.name,
     title: `${BUSINESS_CONFIG.name} | Hudson Lane, Delhi`,
     description: BUSINESS_CONFIG.description,
-    images: [
-      {
-        url: bagheeraLogo.src,
-        width: 1200,
-        height: 630,
-        alt: "Bagheera Cafe & Lounge",
-      },
-    ],
+    // og:image is auto-injected by src/app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
     title: BUSINESS_CONFIG.name,
     description: BUSINESS_CONFIG.description,
-    images: [bagheeraLogo.src],
+    // twitter:image is auto-injected by src/app/twitter-image.tsx
   },
   // TODO: Replace this with the actual client's GSC token before going live
   verification: {
     google: "xtBtDujpJR1-SPp3PlmIlGlZ2ytEvc3_f27JP2Cr_Go",
   },
   icons: {
-    icon: bagheeraLogo.src,
-    shortcut: bagheeraLogo.src,
-    apple: bagheeraLogo.src,
+    icon: encodeURI(bagheeraLogo.src),
+    shortcut: encodeURI(bagheeraLogo.src),
+    apple: encodeURI(bagheeraLogo.src),
   },
 };
 

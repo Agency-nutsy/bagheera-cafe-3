@@ -28,8 +28,8 @@ export const BUSINESS_CONFIG = {
     instagram: "https://www.instagram.com/bagheeracafelounge",
   },
   maps: {
-    link: "https://maps.app.goo.gl/B9Ue3e81M6N6t8pWA",
-    embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1750.6053890123537!2d77.20330663854992!3d28.694665495574586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdf568600a91%3A0xe54d622f671ff215!2sBagheera%20cafe%20%26%20Lounge!5e0!3m2!1sen!2sin!4v1709210214300!5m2!1sen!2sin",
+    link: "https://maps.app.goo.gl/Uuc2Zz3DBWRCz2u68",
+    embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.838780495596!2d77.2043673!3d28.694468899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdf094b1ae2f%3A0xb37be3005f8e6407!2sBagheera%20Cafe%20%26%20Lounge!5e0!3m2!1sen!2sin!4v1784051767233!5m2!1sen!2sin",
   },
   hours: {
     open: "11:00",
