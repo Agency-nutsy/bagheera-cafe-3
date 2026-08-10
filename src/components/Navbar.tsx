@@ -10,6 +10,7 @@ import { BUSINESS_CONFIG } from "@/config/business";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/menu", label: "Menu" },
+  { to: "/sheesha", label: "Sheesha" },
   { to: "/about", label: "About" },
   { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
