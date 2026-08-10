@@ -2,7 +2,7 @@
 // Change values here to update them globally across the entire website.
 
 export const BUSINESS_CONFIG = {
-  name: "Bagheera Cafe & Lounge",
+  name: "Bagheera Delhi",
   domain: "www.bagheeracafeandlounge.in",
   tagline: "Step Into The Wild Side of Luxury",
   description: "North Delhi's premier jungle-themed restaurant and lounge on Hudson Lane, GTB Nagar. Signature cocktails, multicuisine menu, live DJ.",
@@ -13,8 +13,8 @@ export const BUSINESS_CONFIG = {
     email: "info@bagheeracafeandlounge.in", // Placeholder, update if client provides one
   },
   address: {
-    full: "2529, 2nd Floor, Hudson Lane, GTB Nagar, New Delhi, Delhi 110033",
-    street: "2529, 2nd Floor, Hudson Lane, GTB Nagar",
+    full: "2529, 3rd Floor, Hudson Lane, GTB Nagar, New Delhi, Delhi 110033",
+    street: "2529, 3rd Floor, Hudson Lane, GTB Nagar",
     city: "New Delhi",
     state: "Delhi",
     zip: "110009", // Used in JSON-LD

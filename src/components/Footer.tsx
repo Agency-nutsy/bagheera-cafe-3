@@ -14,7 +14,7 @@ const Footer = () => (
         {/* Brand Section */}
         <div className="col-span-2 md:col-span-1">
           <h3 className="font-display text-3xl font-bold mb-4 tracking-tight text-[#FDF5E6]">
-            Bagheera
+            Bagheera Delhi
           </h3>
           <p className="text-[#FDF5E6]/60 text-sm leading-relaxed mb-6 font-light">
             North Delhi&apos;s premier jungle-themed lounge offering an exquisite blend of North Indian, Chinese, and Continental delicacies.
@@ -38,6 +38,7 @@ const Footer = () => (
             {[
               { to: "/", label: "Home" },
               { to: "/menu", label: "Menu" },
+              { to: "/sheesha", label: "Sheesha" },
               { to: "/about", label: "About" },
               { to: "/gallery", label: "Gallery" },
               { to: "/contact", label: "Contact" },
@@ -86,7 +87,7 @@ const Footer = () => (
       {/* Bottom Bar */}
       <div className="border-t border-[#FDF5E6]/10 mt-10 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-[10px] text-[#FDF5E6]/40 tracking-widest uppercase">
-          © {new Date().getFullYear()} Bagheera Cafe &amp; Lounge
+          © {new Date().getFullYear()} Bagheera Delhi
         </p>
         <p className="text-[10px] text-[#FDF5E6]/40 tracking-widest uppercase">
           Open Daily: {BUSINESS_CONFIG.hours.open} – {BUSINESS_CONFIG.hours.close}

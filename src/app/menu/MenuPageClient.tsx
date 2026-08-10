@@ -143,7 +143,7 @@ const menuData: MenuCategory[] = [
         { name: "CHILLI PANEER GRAVY", price: 419 }, { name: "CRISPY PANEER", price: 399 },
         { name: "CHILLI CHAAP", price: 419 }, { name: "CHILLI MUSHROOM", price: 399 },
         { name: "PANEER 65", price: 399 }, { name: "CRISPY CORN", price: 399 },
-        { name: "CRISPY VEG SALT & PEPPER", price: 399 }, { name: "MADAGASCAR SPL STARTER", price: 449 },
+        { name: "CRISPY VEG SALT & PEPPER", price: 399 }, { name: "BAGHEERA SPL STARTER", price: 449 },
       ]},
       { title: "Non-Veg", items: [
         { name: "CHICKEN LOLLIPOP", price: 599 }, { name: "CHILLI CHICKEN DRY", price: 579 },
@@ -319,7 +319,7 @@ const menuData: MenuCategory[] = [
     ]}],
   },
   {
-    id: "madagascar-cocktails", category: "Madagascar Cocktails", emoji: "🍹",
+    id: "bagheera-cocktails", category: "Bagheera Cocktails", emoji: "🍹",
     sections: [{ items: [
       { name: "RUSSIAN SPECIAL", desc: "Vodka 30 ml, Gin 30 ml, Tequila 15 ml", price: 799 },
       { name: "PINK LADY", desc: "Vodka 15 ml, White Rum 20 ml, Mixed Juice", price: 799 },
@@ -364,7 +364,7 @@ const menuData: MenuCategory[] = [
       { name: "OREO SHAKE", price: 249 }, { name: "KITKAT SHAKE", price: 249 },
       { name: "MANGO SHAKE", price: 249 }, { name: "PINEAPPLE SHAKE", price: 249 },
       { name: "STRAWBERRY SHAKE", price: 249 }, { name: "COLD COFFEE", price: 249 },
-      { name: "MADAGASCAR SPECIAL SHAKE", price: 319 },
+      { name: "BAGHEERA SPECIAL SHAKE", price: 319 },
     ]}],
   },
   {

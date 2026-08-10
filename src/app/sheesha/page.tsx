@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Explore Bagheera's full Sheesha & Hookah menu — fruity, minty, signature fusion flavours and hookah series starting at ₹1,499. Premium hookah experience at Hudson Lane, GTB Nagar, Delhi.",
   openGraph: {
-    title: "Sheesha Menu | Bagheera Cafe & Lounge",
+    title: "Sheesha Menu | Bagheera Delhi",
     description:
       "From Double Apple to our signature Midnight Magic blend — premium sheesha with ice, fruit and cocktail base upgrades at Hudson Lane, GTB Nagar.",
     url: `https://${BUSINESS_CONFIG.domain}/sheesha`,

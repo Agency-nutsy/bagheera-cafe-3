@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Bagheera Cafe & Lounge — Hudson Lane, Delhi";
+export const alt = "Bagheera Delhi — Hudson Lane, Delhi";
 export const size = {
   width: 1200,
   height: 630,
@@ -69,7 +69,7 @@ export default async function Image() {
               display: "flex",
             }}
           >
-            BAGHEERA
+            BAGHEERA DELHI
           </div>
 
           {/* Subtitle */}

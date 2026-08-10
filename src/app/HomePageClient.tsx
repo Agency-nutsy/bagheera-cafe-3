@@ -116,7 +116,7 @@ export default function HomePageClient() {
           >
             <Image
               src={heroSlides[currentSlide]}
-              alt="Bagheera Cafe & Lounge"
+              alt="Bagheera Delhi"
               fill
               className="object-cover object-[75%_center] md:object-center brightness-[0.7] contrast-[1.2]"
               priority={currentSlide === 0}
@@ -129,7 +129,7 @@ export default function HomePageClient() {
             <motion.h1
               className="text-4xl sm:text-6xl md:text-7xl font-display font-bold text-[#FDF5E6] mb-4 md:mb-6 uppercase tracking-tighter"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}
-            >Bagheera</motion.h1>
+            ><span>Bagheera Delhi</span></motion.h1>
             <motion.p
               className="text-base md:text-xl text-[#FDF5E6]/80 mb-6 md:mb-8 font-display italic"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}

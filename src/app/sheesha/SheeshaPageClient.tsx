@@ -177,7 +177,7 @@ const sheeshaData: SheeshaCategory[] = [
             price: 1499,
           },
           {
-            name: "JACKER BASE",
+            name: "JAGGAR BASE",
             desc: "Our heaviest signature compound liquor base, crafted exclusively for true enthusiasts.",
             price: 1999,
           },

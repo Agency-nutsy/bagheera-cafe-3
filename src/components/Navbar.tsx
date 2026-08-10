@@ -60,7 +60,7 @@ const Navbar = () => {
               filter: "drop-shadow(0 0 8px rgba(243,208,107,0.6)) drop-shadow(0 0 2px rgba(243,208,107,0.8))",
             }}
           >
-            Bagheera
+            Bagheera Delhi
           </span>
           <div className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#F3D06B] transition-all duration-300 group-hover:w-full shadow-[0_0_10px_#F3D06B]" />
         </Link>

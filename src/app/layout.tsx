@@ -29,11 +29,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${BUSINESS_CONFIG.domain}`),
   title: {
-    default: "Bagheera Cafe & Lounge | Hudson Lane, Delhi",
-    template: "%s | Bagheera Cafe & Lounge",
+    default: "Bagheera Delhi | Hudson Lane, Delhi",
+    template: "%s | Bagheera Delhi",
   },
   description:
-    "Experience the wild side of luxury at Bagheera Cafe & Lounge — North Delhi's premier jungle-themed restaurant and lounge on Hudson Lane, GTB Nagar. Signature cocktails, multicuisine menu, live DJ.",
+    "Experience the wild side of luxury at Bagheera Delhi — North Delhi's premier jungle-themed restaurant and lounge on Hudson Lane, GTB Nagar. Signature cocktails, multicuisine menu, live DJ.",
   keywords: [
     "Bagheera Cafe",
     "Hudson Lane",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     "live DJ Delhi",
     "Bagheera Cafe and Lounge",
   ],
-  authors: [{ name: "Bagheera Cafe & Lounge" }],
-  creator: "Bagheera Cafe & Lounge",
-  publisher: "Bagheera Cafe & Lounge",
+  authors: [{ name: "Bagheera Delhi" }],
+  creator: "Bagheera Delhi",
+  publisher: "Bagheera Delhi",
   robots: {
     index: true,
     follow: true,
