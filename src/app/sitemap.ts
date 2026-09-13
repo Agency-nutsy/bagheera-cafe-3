@@ -1,10 +1,19 @@
 import type { MetadataRoute } from "next";
 
 import { BUSINESS_CONFIG } from "@/config/business";
+import { getAllPosts } from "@/data/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = `https://${BUSINESS_CONFIG.domain}`;
   const lastModified = new Date();
+  const posts = getAllPosts();
+
+  const blogPostEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.isoDate),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
 
   return [
     {
@@ -37,6 +46,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...blogPostEntries,
     {
       url: `${baseUrl}/contact`,
       lastModified,

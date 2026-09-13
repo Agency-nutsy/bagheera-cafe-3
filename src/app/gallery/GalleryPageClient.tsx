@@ -16,14 +16,44 @@ import gallery3 from "@/assets/forest.webp";
 import gallery4 from "@/assets/dj.webp";
 import gallery5 from "@/assets/pasta.jpg";
 import gallery6 from "@/assets/tropical.jpg";
+import momosImg from "@/assets/tandoori-momos.png";
+import alfredoPastaImg from "@/assets/alfredo-pasta.jpg";
+import blackCurrantImg from "@/assets/black-currant-smoothie.png";
+import mangoSmoothieImg from "@/assets/mango-smoothie.png";
+import ambianceImg from "@/assets/bagheera-ambiance.jpg";
+import sandwichImg from "@/assets/chicken-sandwich.jpg";
+import paneerPizzaImg from "@/assets/paneer-tikka-pizza.jpg";
+import blueLemonadeImg from "@/assets/blue-lemonade.png";
+import kitkatShakeImg from "@/assets/kitkat-shake.jpg";
+import pinkLadyImg from "@/assets/pink-lady-cocktail.png";
+import blueLoungeImg from "@/assets/bagheera-blue-lounge.jpg";
+import pinaColadaImg from "@/assets/pina-colada.jpg";
+import virginMaryImg from "@/assets/virgin-mary.png";
+import strawberrySmoothieImg from "@/assets/strawberry-smoothie.png";
+import mixedPunchImg from "@/assets/mixed-punch-mocktail.png";
 
 import type { StaticImageData } from "next/image";
 
 const images: { src: StaticImageData; alt: string; cat: string }[] = [
   { src: tikkaImg, alt: "Peri Peri Chicken Tikka", cat: "Food" },
+  { src: momosImg, alt: "Tandoori Momos", cat: "Food" },
+  { src: ambianceImg, alt: "Bagheera Cafe Ambiance", cat: "Vibe" },
+  { src: blackCurrantImg, alt: "Black Currant Smoothie", cat: "Drinks" },
   { src: gallery1, alt: "Jungle Luxe Lounge", cat: "Vibe" },
+  { src: alfredoPastaImg, alt: "Alfredo Pasta", cat: "Food" },
+  { src: blueLemonadeImg, alt: "Blue Lemonade", cat: "Drinks" },
+  { src: blueLoungeImg, alt: "Bagheera Neon Blue Lounge", cat: "Vibe" },
+  { src: paneerPizzaImg, alt: "Paneer Tikka Pizza", cat: "Food" },
+  { src: pinaColadaImg, alt: "Pina Colada Cocktail", cat: "Drinks" },
   { src: biryaniImg, alt: "Yakhni Biryani", cat: "Food" },
+  { src: kitkatShakeImg, alt: "Kitkat Shake", cat: "Drinks" },
+  { src: virginMaryImg, alt: "Virgin Mary Mocktail", cat: "Drinks" },
+  { src: mangoSmoothieImg, alt: "Mango Smoothie", cat: "Drinks" },
+  { src: sandwichImg, alt: "Grilled Chicken Sandwich", cat: "Food" },
+  { src: strawberrySmoothieImg, alt: "Strawberry Smoothie", cat: "Drinks" },
+  { src: pinkLadyImg, alt: "Pink Lady Cocktail", cat: "Drinks" },
   { src: gallery2, alt: "Signature Platters", cat: "Food" },
+  { src: mixedPunchImg, alt: "Mixed Punch Soda Mocktail", cat: "Drinks" },
   { src: drinkImg, alt: "Bagheera Sangriya", cat: "Drinks" },
   { src: gallery3, alt: "Forest Inspired Decor", cat: "Vibe" },
   { src: gallery4, alt: "Live DJ Sessions", cat: "Vibe" },

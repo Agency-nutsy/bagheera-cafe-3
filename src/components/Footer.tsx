@@ -41,6 +41,7 @@ const Footer = () => (
               { to: "/sheesha", label: "Sheesha" },
               { to: "/about", label: "About" },
               { to: "/gallery", label: "Gallery" },
+              { to: "/blog", label: "Blog" },
               { to: "/contact", label: "Contact" },
             ].map((l) => (
               <li key={l.to}>

@@ -13,6 +13,7 @@ const navLinks = [
   { to: "/sheesha", label: "Sheesha" },
   { to: "/about", label: "About" },
   { to: "/gallery", label: "Gallery" },
+  { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -67,28 +68,31 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <li key={l.to}>
-              <Link
-                href={l.to}
-                style={{ fontFamily: "'Lato', sans-serif" }}
-                className={`text-sm font-bold uppercase tracking-widest transition-colors relative py-1 ${
-                  pathname === l.to
-                    ? "text-[#F3D06B]"
-                    : "text-[#FDF5E6]/70 hover:text-[#FDF5E6]"
-                }`}
-              >
-                {l.label}
-                {pathname === l.to && (
-                  <motion.div
-                    layoutId="nav-indicator"
-                    className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-[#F3D06B] shadow-[0_0_10px_#F3D06B]"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </Link>
-            </li>
-          ))}
+          {navLinks.map((l) => {
+            const isActive = pathname === l.to || (l.to !== "/" && pathname.startsWith(l.to));
+            return (
+              <li key={l.to}>
+                <Link
+                  href={l.to}
+                  style={{ fontFamily: "'Lato', sans-serif" }}
+                  className={`text-sm font-bold uppercase tracking-widest transition-colors relative py-1 ${
+                    isActive
+                      ? "text-[#F3D06B]"
+                      : "text-[#FDF5E6]/70 hover:text-[#FDF5E6]"
+                  }`}
+                >
+                  {l.label}
+                  {isActive && (
+                    <motion.div
+                      layoutId="nav-indicator"
+                      className="absolute -bottom-0.5 left-0 right-0 h-0.5 rounded-full bg-[#F3D06B] shadow-[0_0_10px_#F3D06B]"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Call to Action Button */}
@@ -124,27 +128,30 @@ const Navbar = () => {
           className="md:hidden border-t border-[#FDF5E6]/10 bg-[#0A0F0D] overflow-hidden shadow-2xl"
         >
           <ul className="flex flex-col p-4 gap-2">
-            {navLinks.map((l, i) => (
-              <motion.li
-                key={l.to}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.03 }}
-              >
-                <Link
-                  href={l.to}
-                  onClick={() => setOpen(false)}
-                  style={{ fontFamily: "'Lato', sans-serif" }}
-                  className={`block py-3 px-4 rounded-xl text-sm font-bold transition-colors uppercase tracking-widest ${
-                    pathname === l.to
-                      ? "bg-[#F3D06B] text-black shadow-[0_0_15px_rgba(243,208,107,0.3)]"
-                      : "text-[#FDF5E6]/70 hover:bg-[#FDF5E6]/10 hover:text-[#FDF5E6]"
-                  }`}
+            {navLinks.map((l, i) => {
+              const isActive = pathname === l.to || (l.to !== "/" && pathname.startsWith(l.to));
+              return (
+                <motion.li
+                  key={l.to}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.03 }}
                 >
-                  {l.label}
-                </Link>
-              </motion.li>
-            ))}
+                  <Link
+                    href={l.to}
+                    onClick={() => setOpen(false)}
+                    style={{ fontFamily: "'Lato', sans-serif" }}
+                    className={`block py-3 px-4 rounded-xl text-sm font-bold transition-colors uppercase tracking-widest ${
+                      isActive
+                        ? "bg-[#F3D06B] text-black shadow-[0_0_15px_rgba(243,208,107,0.3)]"
+                        : "text-[#FDF5E6]/70 hover:bg-[#FDF5E6]/10 hover:text-[#FDF5E6]"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </motion.li>
+              );
+            })}
             <motion.li
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
