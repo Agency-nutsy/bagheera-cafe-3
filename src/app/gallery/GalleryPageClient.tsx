@@ -31,18 +31,24 @@ import pinaColadaImg from "@/assets/pina-colada.jpg";
 import virginMaryImg from "@/assets/virgin-mary.png";
 import strawberrySmoothieImg from "@/assets/strawberry-smoothie.png";
 import mixedPunchImg from "@/assets/mixed-punch-mocktail.png";
+import vibeLoungeSeatingImg from "@/assets/vibe-lounge-seating.jpg";
+import vibeNeonBarImg from "@/assets/vibe-neon-bar.jpg";
+import vibeDjConsoleImg from "@/assets/vibe-dj-console.jpg";
 
 import type { StaticImageData } from "next/image";
 
 const images: { src: StaticImageData; alt: string; cat: string }[] = [
+  { src: vibeLoungeSeatingImg, alt: "Luminescent Lounge & Seating", cat: "Vibe" },
   { src: tikkaImg, alt: "Peri Peri Chicken Tikka", cat: "Food" },
   { src: momosImg, alt: "Tandoori Momos", cat: "Food" },
   { src: ambianceImg, alt: "Bagheera Cafe Ambiance", cat: "Vibe" },
+  { src: vibeNeonBarImg, alt: "Signature Neon Bar Counter", cat: "Vibe" },
   { src: blackCurrantImg, alt: "Black Currant Smoothie", cat: "Drinks" },
   { src: gallery1, alt: "Jungle Luxe Lounge", cat: "Vibe" },
   { src: alfredoPastaImg, alt: "Alfredo Pasta", cat: "Food" },
   { src: blueLemonadeImg, alt: "Blue Lemonade", cat: "Drinks" },
   { src: blueLoungeImg, alt: "Bagheera Neon Blue Lounge", cat: "Vibe" },
+  { src: vibeDjConsoleImg, alt: "Electric Live DJ Stage", cat: "Vibe" },
   { src: paneerPizzaImg, alt: "Paneer Tikka Pizza", cat: "Food" },
   { src: pinaColadaImg, alt: "Pina Colada Cocktail", cat: "Drinks" },
   { src: biryaniImg, alt: "Yakhni Biryani", cat: "Food" },
