@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://${BUSINESS_CONFIG.domain}`,
   },
+  verification: {
+    google: "NMnCy2gZ2U3uroXBFCKzb28LpsoRTf4z0lexiGZWHlo",
+  },
 };
 
 export default function HomePage() {

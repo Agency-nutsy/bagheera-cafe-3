@@ -74,9 +74,8 @@ export const metadata: Metadata = {
     description: BUSINESS_CONFIG.description,
     // twitter:image is auto-injected by src/app/twitter-image.tsx
   },
-  // TODO: Replace this with the actual client's GSC token before going live
   verification: {
-    google: "xtBtDujpJR1-SPp3PlmIlGlZ2ytEvc3_f27JP2Cr_Go",
+    google: "NMnCy2gZ2U3uroXBFCKzb28LpsoRTf4z0lexiGZWHlo",
   },
   icons: {
     icon: encodeURI(bagheeraLogo.src),
