@@ -17,7 +17,221 @@ import biryaniImg from "@/assets/biryani.jpg";
 import nachosImg from "@/assets/nachos.jpg";
 import pizzaImg from "@/assets/pizza (3).webp";
 
+import blogMocktailsImg from "@/assets/blog-mocktails.jpg";
+import blogGourmetShakeImg from "@/assets/blog-gourmet-shake.jpg";
+import blogPartyCelebrationImg from "@/assets/blog-party-celebration.jpg";
+import blogPartyPlatterImg from "@/assets/blog-party-platter.jpg";
+
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "hudson-lane-party-blueprint-birthdays-group-gatherings-bagheera",
+    title: "The Hudson Lane Party Blueprint: How to Host Epic Birthdays & Squad Gatherings at Bagheera",
+    subtitle:
+      "From VIP emerald booth reservations and custom sharing platters to resident DJ drops and celebratory sparklers — your definitive guide to stress-free group events in GTB Nagar.",
+    excerpt:
+      "Planning a birthday, reunion, or milestone celebration in North Delhi? Discover how Bagheera crafts unforgettable squad events with biophilic booths, multicuisine feasts, and late-night vibes.",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28T18:30:00+05:30",
+    readTime: "6 min read",
+    category: "Stories & Guides",
+    featuredImage: blogPartyCelebrationImg,
+    featuredImageAlt:
+      "Friends celebrating a birthday party with champagne flutes and sparklers at Bagheera Lounge VIP booth",
+    author: {
+      name: "Rohan Malhotra",
+      role: "Events & Nightlife Curator, Bagheera Delhi",
+    },
+    sections: [
+      {
+        type: "paragraph",
+        text: "Planning a group gathering in North Delhi can quickly turn into a logistical headache. Finding a venue on Hudson Lane that delivers pristine sound without ear-shattering distortion, generous seating without feeling squeezed against stranger tables, and food that genuinely wows everyone in your squad is notoriously difficult.",
+      },
+      {
+        type: "paragraph",
+        text: "At Bagheera Cafe & Lounge, group celebrations are our specialty. From milestone 21st birthdays and college society blowouts to intimate corporate farewells, our jungle-luxe interior was architected from the floor up to handle high-energy gatherings with effortless elegance.",
+      },
+      {
+        type: "heading2",
+        text: "The VIP Sanctuary: Booths Designed for Groups",
+      },
+      {
+        type: "paragraph",
+        text: "Forget cramming chairs around flimsy cafe tables. Bagheera's layout features expansive semicircular booth seating wrapped in deep emerald velvet. Designed to host squads of 6 to 15 guests in secluded comfort, these alcoves offer panoramic views of the lounge while granting your crew an intimate circle for toasts, laughter, and cake-cutting.",
+      },
+      {
+        type: "image",
+        image: blogPartyCelebrationImg,
+        alt: "Squad celebration with glowing celebratory sparklers and champagne flutes around a velvet booth table",
+        caption: "Milestones in style: Our emerald VIP booths combine party intimacy with electric lounge energy.",
+      },
+      {
+        type: "paragraph",
+        text: "When your birthday cake arrives, our service team coordinates directly with the DJ console. As celebratory cold sparklers light up your table, custom birthday tracks fill the room, turning your special moment into an all-eyes-on-you spectacle.",
+      },
+      {
+        type: "quote",
+        text: "A great party isn't just about loud music. It's about pacing: great finger food first, uninterrupted drinks, and then a seamless crescendo onto the dance floor.",
+        author: "Rohan Malhotra",
+      },
+      {
+        type: "heading2",
+        text: "The Squad Feast: High-Impact Sharing Platters",
+      },
+      {
+        type: "paragraph",
+        text: "Nothing stalls party momentum faster than guests struggling over complicated menus. For large groups, our culinary team recommends starting with our jumbo sharing platters — engineered to satisfy diverse palates in one dramatic presentation.",
+      },
+      {
+        type: "image",
+        image: blogPartyPlatterImg,
+        alt: "Lavish sharing platter with gourmet sliders, loaded cheese nachos, and tandoori skewers on slate board",
+        caption: "Feasting made seamless: Handcrafted sharing boards packed with sliders, skewers, and loaded nachos.",
+      },
+      {
+        type: "paragraph",
+        text: "Our crowd-pleaser party lineup brings together crowd favorites designed for sharing:",
+      },
+      {
+        type: "list",
+        items: [
+          "Loaded Corn Tortilla Nachos: In-house fried corn chips smothered in melted cheddar queso, spiced shredded chicken, garden pico de gallo, and cool sour cream.",
+          "Gourmet Artisanal Sliders: Fluffy golden brioche buns layered with melted cheddar, sweet caramelized onions, and juicy herb patties.",
+          "Smoky Clay-Pit Skewers: Succulent chunks of tandoor-roasted chicken and spiced paneer tikka charred fresh over live charcoal embers.",
+          "Signature Dip Flight: House-milled mint-coriander emulsion, smoky chipotle aioli, and sweet mango-chili relish for effortless dipping.",
+        ],
+      },
+      {
+        type: "heading2",
+        text: "Seamless Sound & Live DJ Requests",
+      },
+      {
+        type: "paragraph",
+        text: "Have a special playlist your crew can't live without? Our resident DJs are on deck every Friday and Saturday night, ready to weave your anthem requests into their high-octane sets. Transitioning smoothly from chill sunset lounge beats to peak commercial-Punjabi and Afro-tech drops, the vibe evolves organically as the evening unfolds.",
+      },
+      {
+        type: "callout",
+        calloutTitle: "Party Booking Checklist",
+        calloutType: "tip",
+        text: "Planning for 8 or more guests? Book your VIP booth at least 48 hours in advance by calling our reservation desk (+91-09910192252). Ask our events team about custom pre-fixe appetizer packages and cake-holding services to make your night completely hassle-free.",
+      },
+      {
+        type: "heading2",
+        text: "Celebrate Tonight at Bagheera",
+      },
+      {
+        type: "paragraph",
+        text: "Life's best milestones deserve more than an ordinary dinner. Step inside the emerald sanctuary of Bagheera, gather your tribe, and let us take care of every detail while you create memories that will be talked about for months to come.",
+      },
+    ],
+    seo: {
+      metaTitle: "Host Birthdays & Group Parties in Hudson Lane | Bagheera Delhi",
+      metaDescription:
+        "Plan your dream birthday party, reunion, or group celebration at Bagheera Delhi in Hudson Lane. VIP booth seating, gourmet sharing platters, live DJ, and late-night vibes.",
+      keywords: [
+        "birthday celebration cafe Hudson Lane",
+        "party lounge GTB Nagar",
+        "group bookings Delhi cafes",
+        "Bagheera party packages",
+        "best place for birthday party North Delhi",
+      ],
+    },
+  },
+  {
+    slug: "sip-the-wild-signature-mocktails-and-shakes-hudson-lane",
+    title: "Sip the Wild: Signature Mocktails & Shakes Crafted for Hudson Lane",
+    subtitle:
+      "Beyond ordinary coolers: How cold-pressed botanicals, smoking citrus infusions, and decadent loaded shakes turned Bagheera's non-alcoholic bar into a North Delhi destination.",
+    excerpt:
+      "Explore the artistry behind Bagheera's mixology. From smoking botanical coolers to velvet KitKat dessert shakes, discover the ultimate drinks to pair with your Hudson Lane feast.",
+    date: "October 28, 2026",
+    isoDate: "2026-10-28T15:00:00+05:30",
+    readTime: "5 min read",
+    category: "Food & Flavors",
+    featuredImage: blogMocktailsImg,
+    featuredImageAlt:
+      "Trio of handcrafted signature mocktails with dry ice vapor and botanical garnishes at Bagheera Lounge",
+    author: {
+      name: "Kabir Sen",
+      role: "Head of Mixology & Beverage Craft, Bagheera Delhi",
+    },
+    sections: [
+      {
+        type: "paragraph",
+        text: "Step into Hudson Lane on a sultry Delhi afternoon or an electric weekend evening, and the search for truly inventive drinks often leaves diners disappointed. Most cafes rely on premixed syrups, oversweet sodas, and watered-down mint mojitos. But at Bagheera, our beverage counter was conceived with the same obsessive artisan rigor as our live tandoor and stone-baked pizza stations.",
+      },
+      {
+        type: "paragraph",
+        text: "We believe a non-alcoholic cocktail or specialty shake should possess depth, theater, and botanical sophistication. Whether you are balancing the fiery heat of our Peri Peri Tikka or settling in for an evening of long conversation under our canopy, our beverage program transforms everyday sipping into a sensory journey.",
+      },
+      {
+        type: "heading2",
+        text: "The Botanical Awakening: Cold-Pressed Fruits & Smoking Vapor",
+      },
+      {
+        type: "paragraph",
+        text: "The foundation of our signature mocktail menu lies in fresh, whole botanical ingredients. Instead of shelf-stable flavor concentrates, our bar team begins each afternoon cold-pressing fresh Valencia oranges, tart key limes, and ripe pomegranate seeds. We hand-pound fresh basil, kaffir lime leaves, and garden rosemary to extract their natural aromatic oils.",
+      },
+      {
+        type: "image",
+        image: blogMocktailsImg,
+        alt: "Vibrant botanical mocktails garnished with fresh orchids, citrus wheels, and delicate aromatic smoke",
+        caption: "The art of non-alcoholic mixology: Cold-pressed juices, layered tinctures, and gentle mist infuse every glass.",
+      },
+      {
+        type: "paragraph",
+        text: "Take our iconic Wild Orchard Cooler: layered pomegranate reduction with crushed wild berries, topped with ginger beer and chilled dry-ice mist that cascades over the rim. It is crisp, fragrant, and instantly cleanses the palate without cloying sweetness.",
+      },
+      {
+        type: "quote",
+        text: "Mixology isn't about alcohol; it's about balance. Acid, sweetness, aroma, and temperature must hit in harmonious waves with every single sip.",
+        author: "Kabir Sen",
+      },
+      {
+        type: "heading2",
+        text: "The Shake Sanctuary: Thick, Velvety & Decadent",
+      },
+      {
+        type: "paragraph",
+        text: "For sweet tooth aficionados and late-night dessert cravers, our shake bar offers pure indulgence. Unlike mass-produced shakes thinned out with ice cubes, Bagheera shakes are churned dense with premium whole dairy, rich Madagascar vanilla cream, and generous chunks of gourmet treats.",
+      },
+      {
+        type: "image",
+        image: blogGourmetShakeImg,
+        alt: "Rich artisan KitKat and chocolate hazelnut loaded milkshake topped with whipped cream and wafer stick",
+        caption: "Decadence in a glass: Our artisan shakes are churned extra thick with real chocolate shavings and Belgian fudge.",
+      },
+      {
+        type: "paragraph",
+        text: "Our headline favorite — the Loaded KitKat Crunch Shake — blends crisp malt wafers, Belgian cocoa ganache, and chilled hazelnut praline, crowned with a towering swirl of whipped cream, crispy waffle crisps, and warm chocolate fudge drizzle. It has become an undisputed rite of passage for students and foodies celebrating post-exam victories in GTB Nagar.",
+      },
+      {
+        type: "callout",
+        calloutTitle: "The Golden Palate Pairing Tip",
+        calloutType: "tip",
+        text: "Heading in for our spicy clay-oven starters like the Stuffed Murg Tangdi or Peri Peri Skewers? Skip ordinary water and pair your grill with our Blue Citrus Lagoon Cooler. The cooling blue curacao syrup, crushed mint, and fizz counterbalance the charcoal heat like a dream.",
+      },
+      {
+        type: "heading2",
+        text: "Late-Night Refreshment Until 1:00 AM",
+      },
+      {
+        type: "paragraph",
+        text: "Because our bar keeps pouring until 1:00 AM every night, you don't need to wrap up early. Whether you are driving down from Civil Lines or wrapping up group study sessions in North Campus, the doors of Bagheera's bar stay open to cool, comfort, and elevate your nocturnal cravings.",
+      },
+    ],
+    seo: {
+      metaTitle: "Signature Mocktails & Shakes in Hudson Lane | Bagheera Delhi",
+      metaDescription:
+        "Discover North Delhi's most inventive mocktails and loaded gourmet shakes at Bagheera Delhi, Hudson Lane. Cold-pressed botanical coolers, KitKat shakes, and late-night bar sips.",
+      keywords: [
+        "best mocktails Hudson Lane",
+        "shakes in GTB Nagar",
+        "Bagheera Delhi drinks menu",
+        "non-alcoholic bar North Campus",
+        "dessert shakes Delhi cafe",
+      ],
+    },
+  },
   {
     slug: "why-our-peri-peri-chicken-tikka-is-talk-of-gtb-nagar",
     title: "Why Our Peri Peri Chicken Tikka Is the Talk of GTB Nagar",
